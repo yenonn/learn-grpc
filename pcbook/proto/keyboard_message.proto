@@ -1,0 +1,14 @@
+syntax = "proto3";
+package yenonn.pcbook;
+option go_package = "github.com/yenonn/pcbook/pb";
+
+message Keyboard {
+    enum Layout {
+        UNKNOWN = 0;
+        QWERTY = 1;
+        QWERTZ = 2;
+        AZERTY = 3;
+    }
+    Layout layout = 1;
+    bool backlit = 2;
+}

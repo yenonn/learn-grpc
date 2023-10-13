@@ -1,0 +1,14 @@
+syntax = "proto3";
+package yenonn.pcbook;
+option go_package = "github.com/yenonn/pcbook/pb";
+import "memory_message.proto";
+
+message Storage {
+    enum Driver {
+        UNKNOWN = 0;
+        HDD = 1;
+        SSD = 2;
+    }
+    Driver driver = 1;
+    Memory memory = 2;
+}

@@ -1,0 +1,62 @@
+{
+ "id": "cd8a9793-74d0-4810-9559-a7923e96240d",
+ "brand": "Dell",
+ "name": "Vostro",
+ "cpu": {
+  "brand": "AMD",
+  "name": "Ryzen 3 PRO 3200GE",
+  "number_cores": 6,
+  "number_threads": 11,
+  "min_ghz": 3.2719516128068764,
+  "max_ghz": 3.7872885862849506
+ },
+ "ram": {
+  "value": "48",
+  "unit": "GIGABYTE"
+ },
+ "gpus": [
+  {
+   "brand": "AMD",
+   "name": "RX 580",
+   "min_ghz": 1.27386278626071,
+   "max_ghz": 1.8957938685152778,
+   "memory": {
+    "value": "2",
+    "unit": "GIGABYTE"
+   }
+  }
+ ],
+ "storages": [
+  {
+   "driver": "SSD",
+   "memory": {
+    "value": "981",
+    "unit": "GIGABYTE"
+   }
+  },
+  {
+   "driver": "HDD",
+   "memory": {
+    "value": "3",
+    "unit": "TERABYTE"
+   }
+  }
+ ],
+ "screen": {
+  "size_inch": 15.557665,
+  "resolution": {
+   "width": 2488,
+   "height": 1400
+  },
+  "panel": "IPS",
+  "multitouch": false
+ },
+ "keyboard": {
+  "layout": "QWERTY",
+  "backlit": false
+ },
+ "weight_kg": 2.8859918867333807,
+ "price_usd": 2480.2086440653793,
+ "release_year": 2015,
+ "updated_at": "2023-08-21T13:24:59.200308337Z"
+}
