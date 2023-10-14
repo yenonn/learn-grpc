@@ -5,10 +5,11 @@ import (
 )
 
 func NewProduct() *v1.Product {
+	name, description := RandomNameDescription()
 	return &v1.Product{
-		Id:          "",
-		Name:        "",
-		Description: "",
+		Id:          RandomId(),
+		Name:        name,
+		Description: description,
 		Price:       RandomPrice(),
 	}
 }

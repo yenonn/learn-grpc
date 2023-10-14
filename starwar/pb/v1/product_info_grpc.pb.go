@@ -36,7 +36,7 @@ func NewProductInfoClient(cc grpc.ClientConnInterface) ProductInfoClient {
 
 func (c *productInfoClient) AddProduct(ctx context.Context, in *Product, opts ...grpc.CallOption) (*ProductID, error) {
 	out := new(ProductID)
-	err := c.cc.Invoke(ctx, "/starwar.v1.ProductInfo/addProduct", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/starwar.v1.ProductInfo/AddProduct", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -45,7 +45,7 @@ func (c *productInfoClient) AddProduct(ctx context.Context, in *Product, opts ..
 
 func (c *productInfoClient) GetProduct(ctx context.Context, in *ProductID, opts ...grpc.CallOption) (*Product, error) {
 	out := new(Product)
-	err := c.cc.Invoke(ctx, "/starwar.v1.ProductInfo/getProduct", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/starwar.v1.ProductInfo/GetProduct", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -94,7 +94,7 @@ func _ProductInfo_AddProduct_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/starwar.v1.ProductInfo/addProduct",
+		FullMethod: "/starwar.v1.ProductInfo/AddProduct",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ProductInfoServer).AddProduct(ctx, req.(*Product))
@@ -112,7 +112,7 @@ func _ProductInfo_GetProduct_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/starwar.v1.ProductInfo/getProduct",
+		FullMethod: "/starwar.v1.ProductInfo/GetProduct",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ProductInfoServer).GetProduct(ctx, req.(*ProductID))
@@ -128,11 +128,11 @@ var ProductInfo_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*ProductInfoServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "addProduct",
+			MethodName: "AddProduct",
 			Handler:    _ProductInfo_AddProduct_Handler,
 		},
 		{
-			MethodName: "getProduct",
+			MethodName: "GetProduct",
 			Handler:    _ProductInfo_GetProduct_Handler,
 		},
 	},

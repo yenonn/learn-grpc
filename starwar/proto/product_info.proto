@@ -3,8 +3,8 @@ package starwar.v1;
 option go_package = "github.com/yenonn/starwar/pb/v1";
 
 service ProductInfo {
-    rpc addProduct(Product) returns (ProductID);
-    rpc getProduct(ProductID) returns (Product);
+    rpc AddProduct(Product) returns (ProductID);
+    rpc GetProduct(ProductID) returns (Product);
 }
 
 message Product {
