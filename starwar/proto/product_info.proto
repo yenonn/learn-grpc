@@ -1,6 +1,6 @@
 syntax = "proto3";
-package yenonn.starwar.v1;
-option go_package = "github.com/yenonn/starwar/pb";
+package starwar.v1;
+option go_package = "github.com/yenonn/starwar/pb/v1";
 
 service ProductInfo {
     rpc addProduct(Product) returns (ProductID);
