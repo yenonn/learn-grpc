@@ -33,6 +33,7 @@ func NewDiskImageStore(imageFolder string) *DiskImageStore {
 }
 
 // Saves a new laptop image to the store
+// dymmy message
 func (store *DiskImageStore) Save(
 	laptopID string,
 	imageType string,
